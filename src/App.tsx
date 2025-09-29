@@ -31,6 +31,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
+// Import images
+import labheshImg from './assets/labhesh.png';
+import img1 from './assets/IMG-20250928-WA0011.jpg';
+import img2 from './assets/IMG-20250928-WA0012.jpg';
+import img3 from './assets/IMG-20250928-WA0009.jpg';
+import img4 from './assets/IMG-20250928-WA0010.jpg';
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -336,7 +343,7 @@ function App() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-cyan-400/50 shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
                   <img 
-                    src="/assets/labhesh.png" 
+                    src={labheshImg} 
                     alt="Labhesh Mahajan"
                     className="w-full h-full object-cover"
                     style={{ objectPosition: 'center 25%' }}
@@ -417,28 +424,28 @@ function App() {
                   >
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="/assets/IMG-20250928-WA0011.jpg" 
+                        src={img1} 
                         alt="WPI Demo Day"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="/assets/IMG-20250928-WA0012.jpg" 
+                        src={img2} 
                         alt="Techie turned trail blazer award at GISA 2025"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="/assets/IMG-20250928-WA0009.jpg" 
+                        src={img3} 
                         alt="Best Team Player Award by Colibre Club"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="/assets/IMG-20250928-WA0010.jpg" 
+                        src={img4} 
                         alt="Team working on a project"
                         className="h-full object-contain"
                       />
