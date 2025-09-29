@@ -336,7 +336,7 @@ function App() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-cyan-400/50 shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
                   <img 
-                    src="assets/labhesh.png" 
+                    src="public/assets/labhesh.png" 
                     alt="Labhesh Mahajan"
                     className="w-full h-full object-cover"
                     style={{ objectPosition: 'center 25%' }}
@@ -417,28 +417,28 @@ function App() {
                   >
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="assets/IMG-20250928-WA0011.jpg" 
+                        src="/public/assets/IMG-20250928-WA0011.jpg" 
                         alt="WPI Demo Day"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="assets/IMG-20250928-WA0012.jpg" 
+                        src="public/assets/IMG-20250928-WA0012.jpg" 
                         alt="Techie turned trail blazer award at GISA 2025"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="assets/IMG-20250928-WA0009.jpg" 
+                        src="public/assets/IMG-20250928-WA0009.jpg" 
                         alt="Best Team Player Award by Colibre Club"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="assets/IMG-20250928-WA0010.jpg" 
+                        src="public/assets/IMG-20250928-WA0010.jpg" 
                         alt="Team working on a project"
                         className="h-full object-contain"
                       />
