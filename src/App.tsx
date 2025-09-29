@@ -264,8 +264,8 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 min-h-screen flex items-center relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+      <section id="home" className="pt-16 min-h-screen flex items-center relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 space-y-6">
               <div className="space-y-4">
@@ -354,7 +354,7 @@ function App() {
             </div>
           </div>
           
-          <div className="flex justify-center mt-20">
+          <div className="flex justify-center mt-12">
             <button
               onClick={() => scrollToSection('about')}
               className="text-cyan-400 hover:text-cyan-300 transition-all duration-300 animate-bounce hover:scale-110"
