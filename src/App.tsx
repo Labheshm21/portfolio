@@ -417,28 +417,28 @@ function App() {
                   >
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="assets\IMG-20250928-WA0011.jpg" 
+                        src="assets/IMG-20250928-WA0011.jpg" 
                         alt="WPI Demo Day"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="assets\IMG-20250928-WA0012.jpg" 
+                        src="assets/IMG-20250928-WA0012.jpg" 
                         alt="Techie turned trail blazer award at GISA 2025"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="assets\IMG-20250928-WA0009.jpg" 
+                        src="assets/IMG-20250928-WA0009.jpg" 
                         alt="Best Team Player Award by Colibre Club"
                         className="h-full object-contain"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                       <img 
-                        src="assets\IMG-20250928-WA0010.jpg" 
+                        src="assets/IMG-20250928-WA0010.jpg" 
                         alt="Team working on a project"
                         className="h-full object-contain"
                       />
