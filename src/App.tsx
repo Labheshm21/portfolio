@@ -54,6 +54,19 @@ function App() {
 
   const experiences = [
     {
+  title: "Software Developer Intern",
+  company: "SQE.io",
+  period: "Oct 2025 – Present",
+  description: "Building the backend banking interface using FastAPI, Stripe Connect, and Python. Designing event-driven WebSocket pipelines, secure transaction workflows, and developer-friendly API services for real-time financial operations.",
+  technologies: ["FastAPI", "Python", "Stripe Connect", "PostgreSQL", "WebSockets", "Docker", "AWS"],
+  highlights: [
+    "Designed event-driven WebSocket architecture",
+    "Integrated secure Stripe Connect flows",
+    "Built scalable API modules for banking operations"
+  ]
+},
+
+    {
       title: "Software Developer Intern",
       company: "Closet Mate",
       period: "Jun 2025 – Present",
