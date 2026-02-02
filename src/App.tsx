@@ -54,7 +54,23 @@ function App() {
 
   const experiences = [
     {
-  title: "Software Developer Intern",
+  title: "Software Engineering Intern",
+  company: "Cover Re",
+  period: "Dec 2025 – Present",
+  description: "Building and shipping production-grade fullstack features using Next.js and internal APIs. Focused on wallet-aware UI systems, state synchronization, and reliable end-to-end integrations across Points and Redemption workflows.",
+  technologies: ["Next.js", "TypeScript", "React", "Internal APIs", "Supabase", "PostgreSQL", "Docker"],
+  highlights: [
+    "Shipped production features across fullstack systems",
+    "Designed wallet-aware UI state management (connected, paused, preview modes)",
+    "Collaborated closely with backend engineers to validate API contracts and debug data inconsistencies"
+  ]
+}
+,
+
+
+
+    {
+  title: "Software Engineer Intern",
   company: "SQE.io",
   period: "Oct 2025 – Present",
   description: "Building the backend banking interface using FastAPI, Stripe Connect, and Python. Designing event-driven WebSocket pipelines, secure transaction workflows, and developer-friendly API services for real-time financial operations.",
@@ -67,9 +83,9 @@ function App() {
 },
 
     {
-      title: "Software Developer Intern",
+      title: "Software Engineer Intern",
       company: "Closet Mate",
-      period: "Jun 2025 – Present",
+      period: "Jun 2025 – Dec 2025",
       description: "Building ClosetMate, a swipe-based shopping app using React Native and Java backend. Leading a team of 3 developers while contributing to product strategy.",
       technologies: ["React Native", "Java", "PostgreSQL", "AWS Lambda", "Docker"],
       highlights: ["Leading 3 developers", "Product strategy contributor", "Scalable architecture"]
