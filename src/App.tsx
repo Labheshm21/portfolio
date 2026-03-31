@@ -53,19 +53,8 @@ function App() {
   ];
 
   const experiences = [
-    {
-  title: "Software Engineering Intern",
-  company: "Cover Re",
-  period: "Dec 2025 – Present",
-  description: "Building and shipping production-grade fullstack features using Next.js and internal APIs. Focused on wallet-aware UI systems, state synchronization, and reliable end-to-end integrations across Points and Redemption workflows.",
-  technologies: ["Next.js", "TypeScript", "React", "Internal APIs", "Supabase", "PostgreSQL", "Docker"],
-  highlights: [
-    "Shipped production features across fullstack systems",
-    "Designed wallet-aware UI state management (connected, paused, preview modes)",
-    "Collaborated closely with backend engineers to validate API contracts and debug data inconsistencies"
-  ]
-}
-,
+    
+
 
 
 
@@ -79,6 +68,19 @@ function App() {
     "Designed event-driven WebSocket architecture",
     "Integrated secure Stripe Connect flows",
     "Built scalable API modules for banking operations"
+  ]
+},
+
+{
+  title: "Software Engineering Intern",
+  company: "Cover Re",
+  period: "Dec 2025 – Mar 2026",
+  description: "Building and shipping production-grade fullstack features using Next.js and internal APIs. Focused on wallet-aware UI systems, state synchronization, and reliable end-to-end integrations across Points and Redemption workflows.",
+  technologies: ["Next.js", "TypeScript", "React", "Internal APIs", "Supabase", "PostgreSQL", "Docker"],
+  highlights: [
+    "Shipped production features across fullstack systems",
+    "Designed wallet-aware UI state management (connected, paused, preview modes)",
+    "Collaborated closely with backend engineers to validate API contracts and debug data inconsistencies"
   ]
 },
 
