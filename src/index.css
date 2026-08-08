@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.portfolio-gallery .swiper-pagination-bullet {
+  background: rgb(148 163 184);
+  opacity: 0.45;
+}
+
+.portfolio-gallery .swiper-pagination-bullet-active {
+  width: 1.5rem;
+  border-radius: 999px;
+  background: rgb(103 232 249);
+  opacity: 1;
+}
