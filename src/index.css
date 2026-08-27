@@ -13,3 +13,29 @@
   background: rgb(103 232 249);
   opacity: 1;
 }
+
+.award-glimmer::before {
+  content: '';
+  position: absolute;
+  inset: -70% auto -70% -55%;
+  width: 38%;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 244, 190, 0.32), transparent);
+  animation: award-glimmer 5.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.award-grid .award-glimmer:nth-child(2)::before { animation-delay: 0.45s; }
+.award-grid .award-glimmer:nth-child(3)::before { animation-delay: 0.9s; }
+.award-grid .award-glimmer:nth-child(4)::before { animation-delay: 1.35s; }
+.award-grid .award-glimmer:nth-child(5)::before { animation-delay: 1.8s; }
+
+@keyframes award-glimmer {
+  0%, 52% { left: -55%; opacity: 0; }
+  58% { opacity: 1; }
+  76%, 100% { left: 125%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .award-glimmer::before { animation: none; }
+}
