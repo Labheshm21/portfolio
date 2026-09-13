@@ -16,17 +16,66 @@ const navItems = ['about', 'projects', 'experience', 'skills', 'gallery', 'conta
 const galleryPhotos = [redHatHackathonPhoto, gallery1, gallery2, gallery3, gallery4];
 
 const experience = [
-  { company: 'SQE.io', role: 'Software Engineer Intern', place: 'San Francisco, CA', period: 'Oct 2025 - Present', summary: 'Build production AI agents and a reusable FastAPI agent platform that automate internal workflows through multi-step reasoning, prompt orchestration, and tool-driven actions.', wins: ['Built Python and LangChain agents for production workflow automation', 'Created reusable APIs and service patterns for launching additional agents', 'Increased task completion by 29% and reduced unsupported responses by 36% using RAG, FAISS, and groundedness evaluation'] },
-  { company: 'Cover Re (Re Protocol)', role: 'Software Engineer Intern', place: 'San Francisco, CA', period: 'Dec 2025 - Mar 2026', summary: 'Unified on-chain financial data for AI-assisted risk analysis through backend pipelines spanning GraphQL APIs and blockchain RPC services.', wins: ['Improved data consistency by 30% across $90M+ in tracked assets', 'Applied normalization, reconciliation, and time-series reconstruction across financial data', 'Reduced deployment overhead by 50% with automated testing and GitHub Actions CI/CD'] },
-  { company: 'Closet Mate', role: 'Software Engineer Intern', place: 'Worcester, MA', period: 'Jun 2025 - Dec 2025', summary: 'Built an AI virtual try-on system using OpenCV, pose estimation, and garment segmentation for a production fashion platform.', wins: ['Achieved 62% alignment accuracy across 96+ clothing styles', 'Reduced image-processing time by 35% across 2,000+ user images', 'Cut P95 inference latency by 28% on AWS while leading a team of three developers'] },
-  { company: 'Venturly', role: 'Founder & Lead Engineer', place: 'Worcester, MA', period: 'Mar 2025 - Dec 2025', summary: 'Launched a milestone-based funding platform using React, Node.js, Go, PostgreSQL, and AWS.', wins: ['Validated product feasibility with 10 startup teams', 'Built auditable escrow-style transaction models', 'Achieved sub-150 ms API latency in production'] },
+  {
+    company: 'SQE.io', role: 'Software Engineer Intern', place: 'San Francisco, CA', period: 'Oct 2025 - Jul 2026',
+    summary: 'Automated internal workflows with production AI agents and standardized agent development through a reusable FastAPI platform.',
+    wins: [
+      'Built Python and LangChain agents for multi-step reasoning, prompt orchestration, and tool-driven actions',
+      'Created shared service patterns and REST APIs to support additional agents',
+      'Increased task completion by 29% and reduced unsupported responses by 36% using RAG and FAISS, with task-completion and response-groundedness evaluation',
+    ],
+    metric: '29%', metricLabel: 'higher agent task completion',
+  },
+  {
+    company: 'Cover Re (Re Protocol)', role: 'Software Engineer Intern', place: 'San Francisco, CA', period: 'Dec 2025 - Mar 2026',
+    summary: 'Enabled AI-assisted risk analysis by building data ingestion pipelines that connect GraphQL APIs and external data services to asset-processing systems.',
+    wins: [
+      'Improved input-data consistency for AI-assisted analysis by 30% across $90M+ in tracked assets',
+      'Applied normalization, reconciliation, and time-series reconstruction to asset data',
+      'Cut deployment overhead by 50% by automating testing and delivery with GitHub Actions CI/CD',
+    ],
+    metric: '30%', metricLabel: 'higher input-data consistency',
+  },
+  {
+    company: 'Closet Mate', role: 'Software Engineer Intern', place: 'Worcester, MA', period: 'Jun 2025 - Dec 2025',
+    summary: 'Built an AI virtual try-on prototype with OpenCV, pose estimation, and garment segmentation, achieving 62% alignment accuracy across 96+ clothing styles.',
+    wins: [
+      'Reduced AI try-on image-processing time by 35% across 2,000+ user images',
+      'Optimized background removal, landmark detection, resizing, and garment overlays',
+      'Cut P95 inference latency by 28% using AWS Lambda, RDS, S3, and CloudWatch while leading three developers',
+    ],
+    metric: '28%', metricLabel: 'lower P95 inference latency',
+  },
 ];
 
 const projects = [
-  { title: 'CareCall AI', eyebrow: 'Conversational AI + Automation', stack: 'Vapi / LLM Function Calling / Python / FastAPI / SQLAlchemy / SQLite', description: 'Built and deployed an AI voice agent supporting three end-to-end workflows: appointment scheduling, cancellation, and availability lookup.', result: 'Integrated five typed data contracts and three REST endpoints, then debugged live webhook traces across routing, request schemas, date handling, and database matching to improve reliability and task completion.', link: 'https://youtu.be/QhTO2faiuPQ', sourceLink: 'https://github.com/Labheshm21/healthcare_voice' },
-  { title: 'IncidentPilot', eyebrow: 'SRE + Incident Response', stack: 'Next.js / TypeScript / MCP / REST APIs', description: 'An incident-response platform correlating alerts, logs, metrics, deployments, runbooks, and customer-impact data across six operational sources.', result: 'Controlled rollback with human approval, recovery monitoring, and a projected four-minute mitigation time.', link: 'https://github.com/Labheshm21/IncidentPiolt', sourceLink: 'https://github.com/Labheshm21/IncidentPiolt' },
-  { title: 'Enterprise Knowledge Assistant', eyebrow: 'Cloud RAG System', stack: 'Python / FastAPI / Boto3 / Docker / AWS', description: 'A production-ready knowledge service with a four-stage retrieval pipeline for processing and searching internal documentation.', result: 'Containerized delivery to EC2 via ECR and GitHub Actions, with observability and repeatable cloud automation.', link: 'https://github.com/Labheshm21/multiresearch-ai-agent', sourceLink: 'https://github.com/Labheshm21/multiresearch-ai-agent' },
-  { title: 'AeroMind', eyebrow: 'Multi-Agent Travel Planner', stack: 'LangGraph / LangChain / Groq / Tavily / DynamoDB', description: 'A current, personalized travel planner orchestrating three specialized agents through multi-step search and response synthesis.', result: 'Persistent cloud delivery with DynamoDB, automated AWS releases, and CloudWatch monitoring.', link: 'https://github.com/Labheshm21/flight-agent', sourceLink: 'https://github.com/Labheshm21/flight-agent' },
+  {
+    title: 'CareCall AI', label: 'Voice appointment agent', context: 'Conversational AI',
+    description: 'Built an LLM voice agent for booking, cancellation, and availability lookup by connecting Vapi tool calls to FastAPI endpoints and a SQLAlchemy/SQLite backend.',
+    metric: '3 workflows', note: 'Book, cancel, check availability',
+    flow: ['Vapi tool calls', 'FastAPI', 'SQLAlchemy', 'SQLite'],
+    decision: 'Improved voice-agent reliability by validating five typed data contracts and three REST endpoints, resolving routing, schema, date-handling, and database-matching failures.',
+    tags: ['Python', 'Vapi', 'FastAPI', 'SQLAlchemy', 'SQLite'],
+    demoLink: 'https://youtu.be/QhTO2faiuPQ', sourceLink: 'https://github.com/Labheshm21/healthcare_voice',
+  },
+  {
+    title: 'Twinly for Windows', label: 'Open-source AI desktop assistant', context: 'Open-source contributions',
+    description: 'Added phone-call controls and failure diagnostics to an open-source AI assistant through Google Voice call loops, phone-gateway integration, and structured logging in C#/.NET.',
+    metric: 'Email-to-CRM automation', note: 'Contact extraction and synchronization',
+    flow: ['Email', 'Contact extraction', 'Notion CRM'],
+    decision: 'Built a Notion CRM agent to extract and synchronize contacts from email, with authentication, policy controls, tool schemas, and xUnit tests.',
+    tags: ['C#', '.NET', 'Electron', 'React', 'xUnit'],
+    sourceLink: 'https://github.com/OjasMishra32/WindowsTwinly',
+  },
+  {
+    title: 'IncidentPilot', label: 'SRE and incident response platform', context: 'AI operations workflow',
+    description: 'Unified six sources of incident context using Next.js, TypeScript, MCP, and REST APIs to correlate alerts, logs, metrics, deployments, runbooks, and customer impact.',
+    metric: '6 context sources', note: 'A unified view of each incident',
+    flow: ['Incident context', 'Deployment link', 'Human approval', 'Rollback'],
+    decision: 'Linked failures to recent deployments and implemented rollback tooling with human approval. Demonstrated a workflow with a four-minute mitigation target.',
+    tags: ['Next.js', 'TypeScript', 'MCP', 'REST APIs'],
+    sourceLink: 'https://github.com/Labheshm21/IncidentPiolt',
+  },
 ];
 
 const skillGroups: [string, string[]][] = [
@@ -44,19 +93,6 @@ const awards = [
   { value: '2nd', title: 'National-Level Ideathon', detail: 'GSsoc' },
 ];
 
-
-const projectDetails = [
-  { label: 'Voice appointment agent', context: 'Deployed agent', metric: '3 workflows', note: 'Schedule, cancel, check availability', flow: ['Voice input', 'Vapi + tools', 'FastAPI', 'SQLite'], decision: 'Five typed contracts and three REST endpoints connect spoken requests to persistent appointment operations. Debugged routing, schemas, dates, and database matching.', tags: ['Vapi', 'Python', 'FastAPI', 'SQLAlchemy', 'SQLite'] },
-  { label: 'Incident response platform', context: 'Reproducible simulation', metric: '6 data sources', note: 'One correlated incident context', flow: ['Operational signals', 'MCP context', 'Human approval', 'Rollback'], decision: 'Rollback requires human approval and deployment validation. The four-minute mitigation time is a projection from a simulation.', tags: ['Next.js', 'TypeScript', 'MCP', 'REST APIs'] },
-  { label: 'Enterprise knowledge assistant', context: 'Cloud-deployed service', metric: '4-stage retrieval', note: 'From documentation to retrieved context', flow: ['Documents', 'Retrieval pipeline', 'FastAPI', 'AWS EC2'], decision: 'A repeatable delivery path connects Docker, ECR, and GitHub Actions with application observability and AWS automation.', tags: ['Python', 'FastAPI', 'Boto3', 'Docker', 'AWS'] },
-  { label: 'Multi-agent travel planner', context: 'Cloud-deployed application', metric: '3 specialized agents', note: 'Plan, search, synthesize', flow: ['Travel request', 'LangGraph agents', 'Live search', 'Itinerary'], decision: 'Separate planning, live search, and synthesis tasks. Persist application state in DynamoDB and monitor workloads with CloudWatch.', tags: ['LangGraph', 'LangChain', 'Groq', 'Tavily', 'DynamoDB'] },
-];
-const roleMetrics = [
-  ['29%', 'higher agent task completion'],
-  ['30%', 'higher data consistency'],
-  ['28%', 'lower P95 inference latency'],
-  ['10', 'startup teams in pilot onboarding'],
-];
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -98,12 +134,12 @@ function App() {
         <div className="container nav-bar">
           <a className="brand" href="#about" aria-label="Labhesh Mahajan home"><span className="brand-mark">lm<span>.</span></span><span className="brand-name">Labhesh Mahajan</span></a>
           <nav className="desktop-nav" aria-label="Main navigation">
-            {navItems.filter(id => id !== 'about' && id !== 'contact').map(id => <a key={id} href={'#' + id} aria-current={active === id ? 'location' : undefined}>{id === 'gallery' ? 'Beyond the code' : id}</a>)}
+            {navItems.filter(id => id !== 'about' && id !== 'contact').map(id => <a key={id} href={'#' + id} aria-current={active === id ? 'location' : undefined}>{id === 'gallery' ? 'Beyond the Build' : id}</a>)}
           </nav>
           <a className="nav-contact" href="mailto:labheshmahajan01@gmail.com">Let's talk <ArrowUpRight size={15} /></a>
           <button className="menu-toggle icon-button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
         </div>
-        {menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation">{navItems.map(id => <a key={id} href={'#' + id} onClick={() => setMenuOpen(false)}>{id === 'gallery' ? 'Beyond the code' : id}</a>)}</nav>}
+        {menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation">{navItems.map(id => <a key={id} href={'#' + id} onClick={() => setMenuOpen(false)}>{id === 'gallery' ? 'Beyond the Build' : id}</a>)}</nav>}
       </header>
 
       <main id="main">
@@ -139,16 +175,15 @@ function App() {
           <SectionHeading number="01" label="SELECTED WORK" title="Built to do the work." description="A closer look at the systems, the engineering decisions, and the code behind them." />
           <div className="project-grid">
             {projects.map((project, index) => {
-              const detail = projectDetails[index];
               return <article className={'project-card ' + (index === 0 ? 'featured-project' : '')} key={project.title}>
-                <div className="project-top"><span className="project-number">0{index + 1}</span><span className="project-context">{detail.context}</span><a href={project.sourceLink} target="_blank" rel="noreferrer" className="icon-button" aria-label={'View ' + project.title + ' source code'}><ArrowUpRight size={20} /></a></div>
-                <div className="project-title"><p className="eyebrow">{detail.label}</p><h3>{project.title}</h3></div>
+                <div className="project-top"><span className="project-number">0{index + 1}</span><span className="project-context">{project.context}</span><a href={project.sourceLink} target="_blank" rel="noreferrer" className="icon-button" aria-label={'View ' + project.title + ' source code'}><ArrowUpRight size={20} /></a></div>
+                <div className="project-title"><p className="eyebrow">{project.label}</p><h3>{project.title}</h3></div>
                 <p className="project-description">{project.description}</p>
-                <div className="project-flow" aria-label={project.title + ' workflow'}>{detail.flow.map((step, stepIndex) => <span key={step}><b>{step}</b>{stepIndex < detail.flow.length - 1 && <ArrowRight size={13} aria-hidden="true" />}</span>)}</div>
-                <div className="project-evidence"><strong>{detail.metric}</strong><span>{detail.note}</span></div>
-                <div className="engineering-note"><span>ENGINEERING FOCUS</span><p>{detail.decision}</p></div>
-                <ul className="tags" aria-label="Technologies">{detail.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
-                <div className="project-links"><a href={project.sourceLink} target="_blank" rel="noreferrer"><Github size={16} /> View source <ArrowUpRight size={14} /></a>{index === 0 && <a className="demo-link" href={project.link} target="_blank" rel="noreferrer"><Play size={15} /> Watch demo <ArrowUpRight size={14} /></a>}</div>
+                <div className="project-flow" aria-label={project.title + ' workflow'}>{project.flow.map((step, stepIndex) => <span key={step}><b>{step}</b>{stepIndex < project.flow.length - 1 && <ArrowRight size={13} aria-hidden="true" />}</span>)}</div>
+                <div className="project-evidence"><strong>{project.metric}</strong><span>{project.note}</span></div>
+                <div className="engineering-note"><span>ENGINEERING FOCUS</span><p>{project.decision}</p></div>
+                <ul className="tags" aria-label="Technologies">{project.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+                <div className="project-links"><a href={project.sourceLink} target="_blank" rel="noreferrer"><Github size={16} /> View source <ArrowUpRight size={14} /></a>{project.demoLink && <a className="demo-link" href={project.demoLink} target="_blank" rel="noreferrer"><Play size={15} /> Watch demo <ArrowUpRight size={14} /></a>}</div>
               </article>;
             })}
           </div>
@@ -156,11 +191,11 @@ function App() {
 
         <section id="experience" className="section section-tinted">
           <div className="container">
-            <SectionHeading number="02" label="EXPERIENCE" title="Real teams. Real outcomes." description="AI systems, financial data infrastructure, and products taken from idea to deployment." />
+            <SectionHeading number="02" label="EXPERIENCE" title="Real teams. Real outcomes." description="Production AI agents, data pipelines for risk analysis, and computer vision with measurable results." />
             <div className="experience-list">{experience.map((job, index) => <article className="experience-entry" key={job.company}>
               <div className="role-heading"><span className="role-index">0{index + 1}</span><div><h3>{job.company}</h3><p>{job.role}</p><span className="role-date">{job.period}</span><span className="role-location">{job.place}</span></div></div>
               <div className="role-body"><p>{job.summary}</p><ul>{job.wins.map(win => <li key={win}><Check size={16} aria-hidden="true" /><span>{win}</span></li>)}</ul></div>
-              <div className="role-result"><strong>{roleMetrics[index][0]}</strong><span>{roleMetrics[index][1]}</span></div>
+              <div className="role-result"><strong>{job.metric}</strong><span>{job.metricLabel}</span></div>
             </article>)}</div>
           </div>
         </section>
@@ -171,12 +206,34 @@ function App() {
           <div id="education" className="education-strip"><p className="eyebrow">EDUCATION</p><article><h3>M.S. in Computer Science</h3><p>Worcester Polytechnic Institute</p><span>2024 - 2026 · GPA 3.7 / 4.0</span><small>Distributed Systems & Software Engineering</small></article><article><h3>B.E. in Computer Engineering</h3><p>MCT's Rajiv Gandhi Institute of Technology, Mumbai University</p><span>2020 - 2024 · GPA 3.62 / 4.0</span></article></div>
         </section>
 
-        <section id="gallery" className="section section-tinted">
+        <section id="gallery" className="section section-tinted" aria-labelledby="gallery-title">
           <div className="container">
-            <SectionHeading number="04" label="BEYOND THE CODE" title="Building is a team sport." description="Hackathons, presentations, and the people behind the work." />
-            <div className="gallery-heading"><p><Award size={16} /> RAG the City at Red Hat · Winning team, 2026</p><div className="gallery-controls"><span>{String(photoIndex + 1).padStart(2, '0')} / 05</span><button className="icon-button" onClick={() => gallery.current?.slidePrev()} aria-label="Previous photo"><ChevronLeft size={19} /></button><button className="icon-button" onClick={toggleGallery} aria-label={playing ? 'Pause photo slideshow' : 'Play photo slideshow'}>{playing ? <Pause size={17} /> : <Play size={17} />}</button><button className="icon-button" onClick={() => gallery.current?.slideNext()} aria-label="Next photo"><ChevronRight size={19} /></button></div></div>
-            <Swiper className="portfolio-gallery" modules={[A11y, Autoplay, Pagination]} onSwiper={instance => { gallery.current = instance; }} onSlideChange={instance => setPhotoIndex(instance.realIndex)} pagination={{ clickable: true }} onAfterInit={instance => instance.autoplay.stop()} autoplay={{ delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }} grabCursor loop spaceBetween={20} slidesPerView={1.08} breakpoints={{ 640: { slidesPerView: 1.6 }, 1000: { slidesPerView: 2.25 } }}>
-              {galleryPhotos.map((photo, index) => <SwiperSlide key={photo}><figure className="gallery-card"><img src={photo} alt={index === 0 ? 'Labhesh and his team holding their hackathon award at Red Hat' : 'Labhesh Mahajan portfolio event photo ' + index} loading="lazy" width="1600" height="1200" /><figcaption><span>{index === 0 ? 'The team behind the win' : 'Moments from the journey'}</span><span>0{index + 1}</span></figcaption></figure></SwiperSlide>)}
+            <div className="gallery-heading">
+              <h2 id="gallery-title">Beyond the Build</h2>
+              <div className="gallery-controls">
+                <span>{String(photoIndex + 1).padStart(2, '0')} / {String(galleryPhotos.length).padStart(2, '0')}</span>
+                <button className="icon-button" onClick={() => gallery.current?.slidePrev()} aria-label="Previous photo"><ChevronLeft size={19} /></button>
+                <button className="icon-button" onClick={toggleGallery} aria-label={playing ? 'Pause photo slideshow' : 'Play photo slideshow'}>{playing ? <Pause size={17} /> : <Play size={17} />}</button>
+                <button className="icon-button" onClick={() => gallery.current?.slideNext()} aria-label="Next photo"><ChevronRight size={19} /></button>
+              </div>
+            </div>
+            <Swiper
+              className="portfolio-gallery"
+              modules={[A11y, Autoplay, Pagination]}
+              onSwiper={instance => { gallery.current = instance; }}
+              onSlideChange={instance => setPhotoIndex(instance.realIndex)}
+              pagination={{ clickable: true }}
+              onAfterInit={instance => instance.autoplay.stop()}
+              autoplay={{ delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }}
+              grabCursor loop spaceBetween={20} slidesPerView={1.08}
+              breakpoints={{ 640: { slidesPerView: 1.6 }, 1000: { slidesPerView: 2.25 } }}
+            >
+              {galleryPhotos.map((photo, index) => <SwiperSlide key={photo}>
+                <figure className="gallery-card">
+                  <img src={photo} alt={index === 0 ? 'Labhesh and his team holding their hackathon award at Red Hat' : 'Labhesh Mahajan portfolio event photo ' + index} loading="lazy" width="1600" height="1200" />
+                  <figcaption><span>{index === 0 ? 'The team behind the win' : 'Moments from the journey'}</span><span>0{index + 1}</span></figcaption>
+                </figure>
+              </SwiperSlide>)}
             </Swiper>
           </div>
         </section>
