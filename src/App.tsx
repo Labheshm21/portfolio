@@ -60,12 +60,14 @@ const projects = [
   },
   {
     title: 'Twinly for Windows', label: 'Open-source AI desktop assistant', context: 'Open-source contributions',
-    description: 'Added phone-call controls and failure diagnostics to an open-source AI assistant through Google Voice call loops, phone-gateway integration, and structured logging in C#/.NET.',
-    metric: 'Email-to-CRM automation', note: 'Contact extraction and synchronization',
+    recognition: ['Z Fellows · September 2026 cohort', 'Ranked in the top 10% of YC applicants'],
+    description: 'Automated email-to-CRM contact extraction and synchronization with a Notion CRM agent for an open-source AI desktop assistant. Implemented authentication, policy controls, tool schemas, and xUnit tests.',
+    metric: 'Email-to-CRM automation', note: 'Contact extraction and synchronization with Notion',
     flow: ['Email', 'Contact extraction', 'Notion CRM'],
-    decision: 'Built a Notion CRM agent to extract and synchronize contacts from email, with authentication, policy controls, tool schemas, and xUnit tests.',
+    decision: 'Implemented Google Voice call loops and phone-gateway integration in C#/.NET, adding phone-call controls and structured logging to diagnose failures.',
     tags: ['C#', '.NET', 'Electron', 'React', 'xUnit'],
     sourceLink: 'https://github.com/OjasMishra32/WindowsTwinly',
+    websiteLink: 'https://www.twinly.tech/',
   },
   {
     title: 'IncidentPilot', label: 'SRE and incident response platform', context: 'AI operations workflow',
@@ -176,8 +178,9 @@ function App() {
           <div className="project-grid">
             {projects.map((project, index) => {
               return <article className={'project-card ' + (index === 0 ? 'featured-project' : '')} key={project.title}>
-                <div className="project-top"><span className="project-number">0{index + 1}</span><span className="project-context">{project.context}</span><a href={project.sourceLink} target="_blank" rel="noreferrer" className="icon-button" aria-label={'View ' + project.title + ' source code'}><ArrowUpRight size={20} /></a></div>
+                <div className="project-top"><span className="project-number">0{index + 1}</span><span className="project-context">{project.context}</span><a href={project.websiteLink ?? project.sourceLink} target="_blank" rel="noreferrer" className="icon-button" aria-label={project.websiteLink ? 'Visit ' + project.title + ' website' : 'View ' + project.title + ' source code'}><ArrowUpRight size={20} /></a></div>
                 <div className="project-title"><p className="eyebrow">{project.label}</p><h3>{project.title}</h3></div>
+                {project.recognition && <ul className="project-recognition" aria-label={project.title + ' recognition'}>{project.recognition.map(highlight => <li key={highlight}><Award size={15} aria-hidden="true" /><span>{highlight}</span></li>)}</ul>}
                 <p className="project-description">{project.description}</p>
                 <div className="project-flow" aria-label={project.title + ' workflow'}>{project.flow.map((step, stepIndex) => <span key={step}><b>{step}</b>{stepIndex < project.flow.length - 1 && <ArrowRight size={13} aria-hidden="true" />}</span>)}</div>
                 <div className="project-evidence"><strong>{project.metric}</strong><span>{project.note}</span></div>
